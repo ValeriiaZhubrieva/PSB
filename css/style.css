@@ -518,6 +518,7 @@ body::after {
   background: #000;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   padding: 0.75rem 0.625rem 0.75rem 0;
+  outline: none;
 }
 
 .form-email__input::-webkit-input-placeholder {
@@ -538,6 +539,10 @@ body::after {
 
 .form-email__input::placeholder {
   color: rgba(255, 255, 255, 0.4);
+}
+
+.form-email__input:focus-visible {
+  border-bottom: 2px solid rgb(255, 255, 255);
 }
 
 .form-email__btn {
@@ -656,6 +661,11 @@ body::after {
   left: 0;
   pointer-events: none;
   z-index: 5;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .promo__slider-navigation .swiper-button-next {
@@ -2628,6 +2638,11 @@ body::after {
 
   .promo__btn:hover {
     background: #abc1d4;
+  }
+
+  .promo__slider:hover .promo__slider-navigation {
+    opacity: 1;
+    visibility: visible;
   }
 
   .info-links__link:hover {
